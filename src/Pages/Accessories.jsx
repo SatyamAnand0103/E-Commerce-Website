@@ -22,7 +22,7 @@ const Accessories = () => {
     return (
       <>
         <div key={index} className="boxKItem">
-          <img src={eachItem.imgPath} className="pictures_k"></img>
+          <img src={eachItem.imgPath} className="picturesRings"></img>
           {/* <div className="overlay">{eachItem.price}</div> */}
           <div className="text_K">
             {eachItem.text}

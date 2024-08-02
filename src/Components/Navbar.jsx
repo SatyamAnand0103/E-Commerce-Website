@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { React } from "react";
+import { useRef } from "react";
 
 const Navbar = (props) => {
+  const refcart = { useRef };
+
   const handleDress = (arg) => {
     props.changeDress(arg);
   };
@@ -16,6 +19,16 @@ const Navbar = (props) => {
     props.scroll(args);
   };
 
+  let showCart = false;
+  let showAddToCartBox = () => {
+    if (showCart === false) {
+      refcart.current.style.display = "block";
+      showCart = true;
+    } else {
+      refcart.current.style.display = "none";
+      showCart = false;
+    }
+  };
   return (
     <>
       <div className="backgroundBox">
@@ -46,7 +59,6 @@ const Navbar = (props) => {
               <div onClick={() => ScrollinWomen("Kurtis")}>Kurtis</div>
               <div onClick={() => ScrollinWomen("Sarees")}>Sarees</div>
               <div onClick={() => ScrollinWomen("Lehengas")}>Lehengas</div>
-              <div onClick={() => ScrollinWomen("Bridal")}>Bridal</div>
             </div>
           </li>
 
@@ -74,6 +86,11 @@ const Navbar = (props) => {
           Sign In
         </Link>
       </div>
+
+      {/* <p className="Basket" onClick={showAddToCartBox}> */}
+        <img src={require("../images/cart.png")} id="basket" onClick={showAddToCartBox}></img>
+      {/* </p> */}
+      <div className="AddToBasket" ref={refcart}></div>
     </>
   );
 };

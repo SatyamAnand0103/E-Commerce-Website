@@ -5,10 +5,13 @@ import Typed from "typed.js";
 import { useEffect, useState, useRef } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Mens = () => {
   const [brand, setBrand] = useState("Shirts");
   const [DB, setDB] = useState(shirtsDB);
+
+  const navigate = useNavigate();
 
   let changeDressDB = (arg) => {
     if (arg === "Shirts") {
@@ -17,6 +20,11 @@ const Mens = () => {
       setDB(jeansDB);
     }
     setBrand(arg);
+  };
+
+  let mensToShopping = () => {
+    alert("hey its working from mens");
+    navigate("/shopping");
   };
 
   const el = useRef(null);
@@ -45,7 +53,11 @@ const Mens = () => {
     return (
       <>
         <div key={index} className="boxItem">
-          <img src={eachItem.imgPath} className="pictures"></img>
+          <img
+            src={eachItem.imgPath}
+            className="pictures"
+            onClick={mensToShopping}
+          ></img>
           <div className="overlay">{eachItem.price}</div>
           <div className="text">{eachItem.text}</div>
           <div className="contents"> {eachItem.stars}</div>

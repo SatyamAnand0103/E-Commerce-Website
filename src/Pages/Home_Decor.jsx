@@ -27,34 +27,44 @@ const Home_Decor = () => {
     );
   });
 
-  const listItems_5 = ClocksDB.map((eachItem, index) => {
+  // for clocks
+  const listItemsForClocks = ClocksDB.map((eachItem, index) => {
     return (
       <>
         <div key={index} className="boxKItem">
-          <img src={eachItem.imgPath} className="pictures_k"></img>
-          {/* <div className="overlay">{eachItem.price}</div> */}
-          <div className="text_K">
-            {eachItem.text}
-            <p>{eachItem.price}</p>
-          </div>
-          {/* <div className="contents"> {eachItem.stars}</div> */}
+          <img src={eachItem.imgPath} className="picturesClocks"></img>
+          <p className="priceTag">{eachItem.price}</p>
         </div>
       </>
     );
   });
-  const listItems_6 = CurtainsDB.map((eachItem) => {
+
+  //for curtains
+  const listItemsForCurtains = CurtainsDB.map((eachItem) => {
     return (
       <>
-        <img src={eachItem.imgPath} className="pictures_Home_curtains"></img>
-        <p className="price"></p>
+        <div>
+          <img src={eachItem.imgPath} className="picturesHome"></img>
+          <div className="textForcurtains">
+            <p>{eachItem.text}</p>
+            <p>{eachItem.price}</p>
+          </div>
+        </div>
       </>
     );
   });
-  const listItems_7 = WallDecoratorsDB.map((eachItem) => {
+
+  // for Wall Decorators
+  const listItemsForWallDecor = WallDecoratorsDB.map((eachItem) => {
     return (
       <>
-        <img src={eachItem.imgPath} className="pictures_Home_curtains"></img>
-        <p className="price"></p>
+        <div>
+          <img src={eachItem.imgPath} className="picturesHome"></img>
+          <div className="textForcurtains">
+            <p>{eachItem.text}</p>
+            <p>{eachItem.price}</p>
+          </div>
+        </div>
       </>
     );
   });
@@ -77,13 +87,13 @@ const Home_Decor = () => {
       <div className="containerComponent">
         {/* For kurtis */}
         <p className="highterBox"> Clocks </p>
-        <div className="containerKurtis">{listItems_5}</div>
+        <div className="containerForHome">{listItemsForClocks}</div>
         {/* Curtains */}
         <p className="highterBox"> Curtains </p>
-        <div className="containerKurtis">{listItems_6}</div>
+        <div className="containerForHome">{listItemsForCurtains}</div>
         {/* Wall Decorations */}
         <p className="highterBox"> Wall Decorators </p>
-        <div className="containerKurtis">{listItems_7}</div>
+        <div className="containerForHome">{listItemsForWallDecor}</div>
       </div>
 
       {/* contact details */}

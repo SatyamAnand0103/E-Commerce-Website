@@ -1,5 +1,5 @@
 import React from "react";
-import { kurtisDB, womenDB } from "./DB";
+import { kurtisDB, lehengasDB, sareesDB, womenDB } from "./DB";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { Link } from "react-scroll";
@@ -28,17 +28,47 @@ const Women = () => {
     );
   });
 
-  const listItems_3 = kurtisDB.map((eachItem, index) => {
+  const listItemsKurtis = kurtisDB.map((eachItem, index) => {
     return (
       <>
         <div key={index} className="boxKItem">
           <img src={eachItem.imgPath} className="pictures_k"></img>
-          {/* <div className="overlay">{eachItem.price}</div> */}
-          <div className="text_K">
-            {eachItem.text}
+          <div className="textOfClothes">
+            <p>{eachItem.text}</p>
             <p>{eachItem.price}</p>
           </div>
-          {/* <div className="contents"> {eachItem.stars}</div> */}
+        </div>
+      </>
+    );
+  });
+
+  // for Sarees
+
+  const listItemsSarees = sareesDB.map((eachItem, index) => {
+    return (
+      <>
+        <div key={index} className="boxKItem">
+          <img src={eachItem.imgPath} className="pictures_k"></img>
+          <div className="textOfClothes">
+            <p>{eachItem.text}</p>
+            <p>{eachItem.price}</p>
+          </div>
+        </div>
+      </>
+    );
+  });
+
+  //for Lehengas
+
+  const listItemsLehengas = lehengasDB.map((eachItem, index) => {
+    return (
+      <>
+        <div key={index} className="boxKItem">
+          <img src={eachItem.imgPath} className="pictures_k"></img>
+          <span className="textOfClothes">
+            <p>{eachItem.text}</p>
+            <p>{eachItem.price}</p>
+          </span>
         </div>
       </>
     );
@@ -64,10 +94,10 @@ const Women = () => {
 
           <div className="carousel-item">
             <img src={require("../images/W_3.avif")}></img>
-          </div>
-          
-        </div>
 
+          </div>
+
+        </div>
       </div>
 
       <div className="containerWomen">
@@ -77,27 +107,15 @@ const Women = () => {
 
       {/* For kurtis */}
       <p className="highterBox"> Designer Kurtis </p>
-      <div className="containerKurtis">
-        {listItems_3}
-        <li>
-          <Link
-            activeClass="active"
-            to="containerKurtis"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          ></Link>
-        </li>
-      </div>
+      <div className="containerKurtis">{listItemsKurtis}</div>
 
       {/* for sarees */}
       <p className="highterBox"> Designer Sarees </p>
-      <div className="containerSarees">{listItems_3}</div>
+      <div className="containerSarees">{listItemsSarees}</div>
 
       {/* for lehengas */}
       <p className="highterBox"> Designer Lehengas</p>
-      <div className="containerLehengas">{listItems_3}</div>
+      <div className="containerLehengas">{listItemsLehengas}</div>
 
       <Footer />
     </div>

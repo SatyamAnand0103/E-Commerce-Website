@@ -348,6 +348,7 @@ input#women:checked ~ .women {
   grid-template-columns: auto auto auto auto auto;
   margin: 20px;
   background: linear-gradient(to bottom, #ffcc99, #d8bfd8);
+  border-radius: 30px;
 }
 
 /* Individual box styles */
@@ -363,21 +364,21 @@ input#women:checked ~ .women {
 }
 .boxItem {
   /* border: 2px solid blue; */
-  height: 478px;
+  height: 391px;
   width: 300px;
   margin: auto;
   margin-top: 0px;
 }
 
-.boxItem:hover {
+.pictures:hover {
   transform: translateY(-102px);
   transition: 1s;
 }
 .text {
-  border-bottom: 1px solid white;
-  /* height: 100px; */
+  /* border: 1px solid white; */
+  height: 66px;
   position: relative;
-  /* top: -130px; */
+  top: -76px;
   box-sizing: border-box;
   padding-bottom: 20px;
   z-index: 1;
@@ -385,6 +386,8 @@ input#women:checked ~ .women {
   text-align: center;
   font-size: 15px;
   color: aliceblue;
+  width: 17em;
+  margin: auto;
 }
 .boxItem:hover .text {
   opacity: 1;
@@ -419,13 +422,13 @@ input#women:checked ~ .women {
   border-radius: 15px;
 }
 .contents {
-  box-sizing: border-box;
   /* border: 2px solid black; */
   height: 32px;
   padding: 5px 0px 0px 30px;
-  /* text-align: center; */
   margin-left: 73px;
   opacity: 0;
+  width: 8em;
+  margin-top: -105px;
 }
 
 .boxItem:hover .contents {
@@ -573,45 +576,50 @@ input#women:checked ~ .women {
 
 .containerKurtis {
   /* border: 2px solid blue; */
-  height: 19em;
+  height: 25em;
   margin: 2px 14px 0px 14px;
   display: flex;
   overflow: scroll;
+  width: 88%;
+  margin: auto;
 }
 
 .containerSarees {
   /* border: 2px solid blue; */
-  height: 19em;
+  height: 25em;
   margin: 2px 14px 0px 14px;
   display: flex;
+  width: 88%;
+  margin: auto;
   overflow: scroll;
 }
 .containerLehengas {
-  /* border: 2px solid blue; */
-  height: 19em;
+  /* border: 2px solid blue;  */
+  height: 25em;
   margin: 2px 14px 0px 14px;
   display: flex;
+  width: 88%;
+  margin: auto;
   overflow: scroll;
 }
 .boxKItem {
   /* border: 2px solid green; */
-  /* height: 67px; */
-  box-sizing: border-box;
-  margin: 0px 4px 42px;
-  width: 223px;
-  height: 14em;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-left: 15px;
 }
 
 .pictures_k {
   width: 223px;
-  height: 14em;
+  height: 20em;
   border-radius: 10px;
 }
-.text_K {
-  border: 2px solid black;
+
+.textOfClothes {
+  /* border: 2px solid black; */
   height: 40px;
   position: relative;
-  /* top: -103px; */
   box-sizing: border-box;
   padding-top: 6px;
   z-index: -1;
@@ -619,6 +627,7 @@ input#women:checked ~ .women {
   color: black;
   font-size: 12px;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .mensBox {
   width: 5em;
@@ -658,15 +667,16 @@ input#women:checked ~ .women {
 }
 .contact h5 {
   border-bottom: 2px solid grey;
-  margin-left: 50px;
   margin-top: -17px;
   padding: 0px 12px 12px 12px;
   font-weight: 300;
   width: 97em;
+  margin: auto;
 }
 .contactDetails {
   /* border: 2px solid black; */
   display: flex;
+  margin-top: 43px;
 }
 
 h3 {
@@ -688,6 +698,7 @@ h3 {
   height: 133px;
   width: 45em;
   font-size: 13px;
+  margin: auto;
 }
 .ggform h4 {
   text-align: center;
@@ -718,9 +729,52 @@ h3 {
   top: 23em;
   left: 38em;
 }
+
+.containerForHome {
+  /* border: 2px solid blue; */
+  height: 26em;
+  margin: 2px 14px 0px 14px;
+  display: flex;
+  overflow: scroll;
+  width: 88%;
+  margin: auto;
+}
+.priceTag {
+  /* border: 2px solid black; */
+  height: 24px;
+  padding-top: 8px;
+  font-weight: 700;
+  width: 12em;
+  margin: auto;
+  border-radius: 8px;
+  background-color: grey;
+  margin-top: 12px;
+}
+
 .pictures_Home {
   border: 10px solid white;
   margin: 4px;
+}
+
+.picturesClocks {
+  /* width: 223px; */
+  height: 16em;
+  border-radius: 10px;
+}
+.picturesClocks:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+.textForcurtains {
+  /* border: 2px soli d black; */
+  font-size: 13px;
+  text-align: center;
+  font-weight: 700;
+  /* height: 47px; */
+  width: 23em;
+  margin: auto;
+  margin-top: -14px;
+  height: 72px;
 }
 
 .leftBox {
@@ -760,13 +814,14 @@ h3 {
   top: 22em;
   width: 26em;
 }
-.pictures_Home_curtains {
+.picturesHome {
   border: 10px solid white;
   margin: 4px;
+  height: 19em;
 }
-.pictures_Home_curtains:hover {
-  transform: scale(1.3);
-  transition: 0.7s;
+.picturesHome:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 
 /* Accessories */
@@ -797,6 +852,7 @@ h3 {
   height: 18em;
   margin: 6px;
 }
+
 .pictures_access:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
@@ -837,6 +893,13 @@ h3 {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+
+.picturesRings {
+  width: 223px;
+  /* height: 18em; */
+  border-radius: 10px;
+}
+
 .leftBoxAccess {
   margin-top: -1px;
   /* border-right: 2px solid black; */
@@ -1010,4 +1073,45 @@ h3 {
 
 input:focus {
   outline: none;
+}
+#loginText {
+  color: #9b6bcd;
+  cursor: pointer;
+}
+/* .Basket {
+  z-index: 1;
+  border: 2px solid black;
+  width: 3em;
+  position: fixed;
+  right: 0em;
+  padding: 6px;
+  top: 9em;
+  border-radius: 8px;
+  background-color: #9b6bcd;
+} */
+#basket {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  right: 5em;
+  /* padding: 6px; */
+  top: 3em;
+  z-index: 1;
+}
+#basket:hover {
+  transform: scale(1.2);
+}
+.AddToBasket {
+  /* border: 2px solid black; */
+  height: 30em;
+  position: fixed;
+  right: 0em;
+  padding: 6px;
+  width: 15em;
+  z-index: 1;
+  top: 9em;
+  border-radius: 10px;
+  background-color: #9b6bcd;
+  max-width: 40em;
+  display: none;
 }
