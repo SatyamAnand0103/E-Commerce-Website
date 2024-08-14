@@ -3,7 +3,6 @@ import { shirtsDB } from "./DB";
 import { jeansDB } from "./DB";
 import Typed from "typed.js";
 
-import axios from "axios";
 
 import { useEffect, useState, useRef } from "react";
 import Navbar from "../Components/Navbar";
@@ -16,14 +15,8 @@ const Mens = () => {
   const [brand, setBrand] = useState("Shirts");
   const [DB, setDB] = useState(shirtsDB);
   const navigate = useNavigate();
-  // const [post, setPost] = React.useState(null);
 
-  React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-  if (!post) return null;
+  
 
   let changeDressDB = (arg) => {
     if (arg === "Shirts") {
