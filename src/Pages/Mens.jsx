@@ -2,16 +2,28 @@ import React from "react";
 import { shirtsDB } from "./DB";
 import { jeansDB } from "./DB";
 import Typed from "typed.js";
+
+import axios from "axios";
+
 import { useEffect, useState, useRef } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
 
+const baseURL = "http://localhost:5000/shirt/api";
+
 const Mens = () => {
   const [brand, setBrand] = useState("Shirts");
   const [DB, setDB] = useState(shirtsDB);
-
   const navigate = useNavigate();
+  // const [post, setPost] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+    });
+  }, []);
+  if (!post) return null;
 
   let changeDressDB = (arg) => {
     if (arg === "Shirts") {
@@ -22,9 +34,15 @@ const Mens = () => {
     setBrand(arg);
   };
 
-  let mensToShopping = () => {
-    alert("hey its working from mens");
-    navigate("/shopping");
+  let mensToShopping = (i) => {
+    console.log("Mens Database id: " + i);
+
+    const items = brand;
+    let database;
+    if ((i) => 0 && i < 20) {
+      database = DB;
+    }
+    navigate("/shopping", { state: { i, items, database } });
   };
 
   const el = useRef(null);
@@ -56,8 +74,8 @@ const Mens = () => {
           <img
             src={eachItem.imgPath}
             className="pictures"
-            onClick={mensToShopping}
-          ></img>
+            onClick={() => mensToShopping(index)}
+          />
           <div className="overlay">{eachItem.price}</div>
           <div className="text">{eachItem.text}</div>
           <div className="contents"> {eachItem.stars}</div>

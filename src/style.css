@@ -144,6 +144,7 @@ li:hover {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
+  z-index: -1;
 }
 .fadeImg {
   height: 23em;
@@ -375,10 +376,10 @@ input#women:checked ~ .women {
   transition: 1s;
 }
 .text {
-  /* border: 1px solid white; */
+  /* border: 1px solid black; */
   height: 66px;
   position: relative;
-  top: -76px;
+  top: -40px;
   box-sizing: border-box;
   padding-bottom: 20px;
   z-index: 1;
@@ -428,7 +429,7 @@ input#women:checked ~ .women {
   margin-left: 73px;
   opacity: 0;
   width: 8em;
-  margin-top: -105px;
+  margin-top: -66px;
 }
 
 .boxItem:hover .contents {
@@ -552,6 +553,7 @@ input#women:checked ~ .women {
   top: 150px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: -1;
 }
 .boxWItem {
   height: 479px;
@@ -727,7 +729,7 @@ h3 {
   background-color: black;
   position: relative;
   top: 23em;
-  left: 38em;
+  left: 2em;
 }
 
 .containerForHome {
@@ -794,7 +796,7 @@ h3 {
   color: white;
   position: absolute;
   left: 20em;
-  top: 172px;
+  top: 140px;
 }
 
 .homeContainer h1 {
@@ -803,7 +805,7 @@ h3 {
   color: white;
   position: absolute;
   left: 8em;
-  top: 5em;
+  top: 160px;
 }
 
 .homeContainer h5 {
@@ -811,7 +813,7 @@ h3 {
   color: white;
   position: absolute;
   left: 17em;
-  top: 22em;
+  top: 18em;
   width: 26em;
 }
 .picturesHome {
@@ -900,6 +902,11 @@ h3 {
   border-radius: 10px;
 }
 
+.picturesRings:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
 .leftBoxAccess {
   margin-top: -1px;
   /* border-right: 2px solid black; */
@@ -929,7 +936,11 @@ h3 {
   left: 8em;
   top: 5em;
 }
-
+.text_Rings {
+  font-weight: 700;
+  /* border: 2px solid black; */
+  font-size: 12px;
+}
 .accessContainer h5 {
   padding: 8px;
   color: black;
@@ -940,10 +951,11 @@ h3 {
 }
 .containerRings {
   /* border: 2px solid blue; */
-  height: 19em;
+  height: 22em;
   margin: 2px 14px 0px 14px;
   display: flex;
   overflow: scroll;
+  background: linear-gradient(to right, pink, lightpink);
 }
 
 .ToTop {
@@ -1078,40 +1090,176 @@ input:focus {
   color: #9b6bcd;
   cursor: pointer;
 }
-/* .Basket {
-  z-index: 1;
-  border: 2px solid black;
-  width: 3em;
-  position: fixed;
-  right: 0em;
-  padding: 6px;
-  top: 9em;
-  border-radius: 8px;
-  background-color: #9b6bcd;
-} */
-#basket {
-  height: 40px;
-  width: 40px;
-  position: fixed;
-  right: 5em;
-  /* padding: 6px; */
-  top: 3em;
-  z-index: 1;
+
+#typeOfClothe {
+  border-bottom: 4px solid #d2b48c;
+  position: relative;
+  top: -19em;
+  left: -13em;
+  width: 5em;
+  text-align: center;
+  color: brown;
 }
-#basket:hover {
-  transform: scale(1.2);
+#MyDiv {
+  max-height: 30em;
+  max-width: 26em;
+  margin-left: -8em;
+  border: 5px solid #d2b48c;
 }
-.AddToBasket {
+.dbText {
   /* border: 2px solid black; */
-  height: 30em;
+  height: 49px;
+  width: 317px;
+  position: relative;
+  left: 49em;
+  top: -6em;
+  max-height: 100px;
+  font-weight: 700;
+}
+.dbPrice {
+  /* border: 2px solid black; */
+  height: 22px;
+  width: 58px;
+  position: relative;
+  left: 63em;
+  top: -100px;
+  font-weight: 700;
+}
+.dbStars {
+  /* border: 2px solid black; */
+  height: 22px;
+  width: 100px;
+  position: relative;
+  left: 50em;
+  top: -143px;
+}
+.NumbrerOfItems {
+  /* border: 2px solid black; */
+  height: 22px;
+  width: 192px;
+  position: relative;
+  left: 49.3em;
+  top: -144px;
+}
+.Size {
+  height: 22px;
+  width: 192px;
+  position: relative;
+  left: 49.3em;
+  top: -144px;
+}
+#Size {
+  position: relative;
+  left: 60em;
+  top: -144px;
+}
+.buttons {
+  /* border: 2px solid black; */
+  height: 109px;
+  width: 17em;
+  position: relative;
+  left: 49.3em;
+  top: -126px;
+}
+.buttons button {
+  height: 39px;
+  width: 16em;
+  font-size: 16px;
+  margin: 4px;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(to right, #bb8fce, #9b6bcd);
+  border-style: none;
+}
+.buttons button:hover {
+  background: linear-gradient(to right, #1e90ff, #00ced1);
+}
+
+/* For Chat Bot */
+
+#chatButton {
   position: fixed;
-  right: 0em;
-  padding: 6px;
-  width: 15em;
-  z-index: 1;
-  top: 9em;
-  border-radius: 10px;
+  bottom: 20px;
+  right: 20px;
   background-color: #9b6bcd;
-  max-width: 40em;
+  background: linear-gradient(to right, #bb8fce, #9b6bcd);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  /* padding: 15px; */
+  font-size: 20px;
+  cursor: pointer;
+  height: 42px;
+  width: 66px;
+}
+
+#chatWindow {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#chatHeader {
+  background-color: #9b6bcd;
+  background: linear-gradient(to right, #bb8fce, #9b6bcd);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#chatBody {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#chatFooter {
+  padding: 10px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+}
+
+#chatFooter input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+#chatFooter button {
+  background-color: #9b6bcd;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Payment {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: 6%;
+  top: 20%;
+  overflow: scroll;
+}
+
+.basket {
+  border: 2px solid black;
+  height: 35em;
+  position: relative;
+  width: 55em;
+  top: -30em;
+  margin: auto;
+  background-color: white;
   display: none;
 }

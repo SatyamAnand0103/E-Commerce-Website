@@ -1,34 +1,47 @@
 import { Link } from "react-router-dom";
 import { React } from "react";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = (props) => {
   const refcart = { useRef };
+
+  const navigate = useNavigate();
 
   const handleDress = (arg) => {
     props.changeDress(arg);
   };
   const ScrollinWomen = (args) => {
-    props.scroll(args);
+    props.scrollBarForWomenPage(args);
   };
 
   const ScrollinHome = (args) => {
-    props.scroll(args);
+    props.scrollForHomePage(args);
   };
   const ScrollinAccess = (args) => {
-    props.scroll(args);
+    props.scrollForAccessPage(args);
   };
 
-  let showCart = false;
   let showAddToCartBox = () => {
-    if (showCart === false) {
-      refcart.current.style.display = "block";
-      showCart = true;
-    } else {
-      refcart.current.style.display = "none";
-      showCart = false;
+    navigate("/shopping");
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const sendMessage = () => {
+    if (input.trim() !== "") {
+      setMessages([...messages, input]);
+      setInput("");
     }
   };
+
   return (
     <>
       <div className="backgroundBox">
@@ -87,10 +100,30 @@ const Navbar = (props) => {
         </Link>
       </div>
 
-      {/* <p className="Basket" onClick={showAddToCartBox}> */}
-        <img src={require("../images/cart.png")} id="basket" onClick={showAddToCartBox}></img>
-      {/* </p> */}
-      <div className="AddToBasket" ref={refcart}></div>
+      <div>
+        <button id="chatButton" onClick={toggleChat}>
+          💬
+        </button>
+        {isOpen && (
+          <div id="chatWindow">
+            <div id="chatHeader">Chat with us!</div>
+            <div id="chatBody">
+              {messages.map((msg, index) => (
+                <div key={index}>{msg}</div>
+              ))}
+            </div>
+            <div id="chatFooter">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Type a message..."
+              />
+              <button onClick={sendMessage}>Send</button>
+            </div>
+          </div>
+        )}
+      </div>
     </>
   );
 };

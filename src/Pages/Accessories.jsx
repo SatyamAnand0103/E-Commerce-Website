@@ -2,18 +2,37 @@ import React from "react";
 import { AccessoriesDB, RingsDB } from "./DB";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Accessories = () => {
+  const navigate = useNavigate();
   const ScrollBarAccess = (args) => {
     if (args === "Rings") {
       window.scrollTo(0, 600);
     }
   };
+  let items, database;
+  let AccessoriesToShopping = (i) => {
+    // alert(i + " " + "Accessories rings");
 
-  const listItems_8 = AccessoriesDB.map((eachItem) => {
+    if (i >= 0 && i <= 10) {
+      items = "Rings";
+      database = RingsDB;
+    }
+
+    setTimeout(() => {
+      navigate("/shopping", { state: { i, items, database } });
+
+    }, 400);
+    // navigate("/shopping", { state: { i, items, database } });
+  };
+
+  const listItems_8 = AccessoriesDB.map((eachItem, index) => {
     return (
       <>
-        <img src={eachItem.imgPath} className="pictures_access"></img>
+        <div key={index}>
+          <img src={eachItem.imgPath} className="pictures_access"></img>
+        </div>
       </>
     );
   });
@@ -22,9 +41,12 @@ const Accessories = () => {
     return (
       <>
         <div key={index} className="boxKItem">
-          <img src={eachItem.imgPath} className="picturesRings"></img>
-          {/* <div className="overlay">{eachItem.price}</div> */}
-          <div className="text_K">
+          <img
+            src={eachItem.imgPath}
+            className="picturesRings"
+            onClick={() => AccessoriesToShopping(index)}
+          ></img>
+          <div className="text_Rings">
             {eachItem.text}
             <p>{eachItem.price}</p>
           </div>
@@ -35,7 +57,7 @@ const Accessories = () => {
   });
   return (
     <>
-      <Navbar scroll={ScrollBarAccess} />
+      <Navbar scrollForAccessPage={ScrollBarAccess} />
 
       <div className="accessContainer">
         <p className="leftBoxAccess"></p>

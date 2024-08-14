@@ -4,29 +4,18 @@ import { useRef } from "react";
 const Footer = () => {
   const refElement = { useRef };
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
-
   let scrollFunction = () => {
-    //   if (
-    //     document.body.scrollTop > 20 ||
-    //     document.documentElement.scrollTop > 20
-    //   ) {
-    //     refElement.style.display = "block";
-    //   } else {
-    //     refElement.style.display = "none";
-    //   }
-    // };
-
     if (
       document.body.scrollTop > 300 ||
       document.documentElement.scrollTop > 300
     ) {
-      document.querySelector(".ToTop").style.display = "block";
+      refElement.current.style.display = "block";
     } else {
-      document.querySelector(".ToTop").style.display = "none";
+      refElement.current.style.display = "none";
     }
+  };
+  document.documentElement.onscroll = () => {
+    scrollFunction();
   };
 
   let arrowScroll = () => {
@@ -42,13 +31,14 @@ const Footer = () => {
           ARAV ETHNICS
         </p>
         <h5>
-          Welcome to the House of Indya, a world of fashion where traditions are
-          fused with modern aesthetics and infused with an ultra-modern spirit
-          to cater to the women of today. It is an authentic fashion brand
-          quintessentially dedicated to Indian ethnic wear. We like to call
-          ourselves a pioneer in prêt modern-ethnic wear, trying to make Indian
-          fashion approachable and affordable to all by eliminating the
-          meticulous hopping between shops and pain-staking efforts.
+          Welcome to the House of <strong>Arav Ethnics</strong>, a world of
+          fashion where traditions are fused with modern aesthetics and infused
+          with an ultra-modern spirit to cater to the people of today. It is an
+          authentic fashion brand quintessentially dedicated to Indian ethnic
+          wear. We like to call ourselves a pioneer in prêt modern-ethnic wear,
+          trying to make Indian fashion approachable and affordable to all by
+          eliminating the meticulous hopping between shops and pain-staking
+          efforts.
         </h5>
         <h3>IN CASE OF ANY CONCERN / Queries, CONTACT US</h3>
 

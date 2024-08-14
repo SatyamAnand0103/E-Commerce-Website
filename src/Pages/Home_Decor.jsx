@@ -7,8 +7,11 @@ import {
 } from "./DB";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home_Decor = () => {
+  const navigate = useNavigate();
+
   const ScrollBarHome = (args) => {
     if (args === "Clocks") {
       window.scrollTo(0, 600);
@@ -17,6 +20,35 @@ const Home_Decor = () => {
     } else if (args === "Wall_Decorators") {
       window.scrollTo(0, 1300);
     }
+  };
+  let items, database;
+
+  //for clocks items and databse
+  let ClocksToShopping = (i) => {
+    // alert(i + "" + "Clocks");
+    if (i >= 0 && i <= 10) {
+      items = "Clocks";
+      database = ClocksDB;
+    }
+    navigate("/shopping", { state: { i, database, items } });
+  };
+  // for curtains items and database
+  let CurtainsToShopping = (i) => {
+    // alert(i + "" + "Clocks");
+    if (i >= 0 && i <= 10) {
+      items = "Curtains";
+      database = CurtainsDB;
+    }
+    navigate("/shopping", { state: { i, database, items } });
+  };
+  // for wall items ad databse
+  let WallToShopping = (i) => {
+    // alert(i + "" + "Clocks");
+    if (i >= 0 && i <= 10) {
+      items = "Wall Decor";
+      database = WallDecoratorsDB;
+    }
+    navigate("/shopping", { state: { i, database, items } });
   };
 
   const listItems_4 = Home_DecorationDB.map((eachItem) => {
@@ -32,7 +64,11 @@ const Home_Decor = () => {
     return (
       <>
         <div key={index} className="boxKItem">
-          <img src={eachItem.imgPath} className="picturesClocks"></img>
+          <img
+            src={eachItem.imgPath}
+            className="picturesClocks"
+            onClick={() => ClocksToShopping(index)}
+          ></img>
           <p className="priceTag">{eachItem.price}</p>
         </div>
       </>
@@ -40,11 +76,15 @@ const Home_Decor = () => {
   });
 
   //for curtains
-  const listItemsForCurtains = CurtainsDB.map((eachItem) => {
+  const listItemsForCurtains = CurtainsDB.map((eachItem,index) => {
     return (
       <>
-        <div>
-          <img src={eachItem.imgPath} className="picturesHome"></img>
+        <div key={index}>
+          <img
+            src={eachItem.imgPath}
+            className="picturesHome"
+            onClick={() => CurtainsToShopping(index)}
+          ></img>
           <div className="textForcurtains">
             <p>{eachItem.text}</p>
             <p>{eachItem.price}</p>
@@ -55,11 +95,15 @@ const Home_Decor = () => {
   });
 
   // for Wall Decorators
-  const listItemsForWallDecor = WallDecoratorsDB.map((eachItem) => {
+  const listItemsForWallDecor = WallDecoratorsDB.map((eachItem,index) => {
     return (
       <>
-        <div>
-          <img src={eachItem.imgPath} className="picturesHome"></img>
+        <div key={index}>
+          <img
+            src={eachItem.imgPath}
+            className="picturesHome"
+            onClick={() => WallToShopping(index)}
+          ></img>
           <div className="textForcurtains">
             <p>{eachItem.text}</p>
             <p>{eachItem.price}</p>
@@ -71,7 +115,7 @@ const Home_Decor = () => {
 
   return (
     <>
-      <Navbar scroll={ScrollBarHome} />
+      <Navbar scrollForHomePage={ScrollBarHome} />
 
       <div className="homeContainer">
         <p className="leftBox"></p>
