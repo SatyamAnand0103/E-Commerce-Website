@@ -1,0 +1,64 @@
+{
+  "RingsDB": [
+    {
+      "uid": "96",
+      "imgPath": "images/R_1.webp",
+      "text": "Rings For Woman & Girl,( BJT-RNGG-LL-9021 ) BALJIT JEWELLERY",
+      "price": " ₹ 7500"
+    },
+    {
+      "uid": "97",
+      "imgPath": "images/R_2.jpeg",
+      "text": "KuberBox 18KT Yellow Gold Malia Garnet Ring for Women",
+      "price": " ₹18564 "
+    },
+    {
+      "uid": "98",
+      "imgPath": "images/R_3.webp",
+      "text": "925 Sterling  Adjustable Silver Rhodium-Plated Ring",
+      "price": " ₹2199 "
+    },
+    {
+      "uid": "99",
+      "imgPath": "images/R_4.jpg",
+      "text": "GIVA 925 Silver Fibonacci Ring, 6 Month Warranty*",
+      "price": " ₹ 967"
+    },
+    {
+      "uid": "100",
+      "imgPath": "images/R_5.webp",
+      "text": "Anushka Sharma Silver Vintage Couple Band",
+      "price": " ₹2899 "
+    },
+    {
+      "uid": "101",
+      "imgPath": "images/R_6.webp",
+      "text": "GIVA 925 Silver Adjustable Precious Heart Ring ",
+      "price": " ₹1583 "
+    },
+    {
+      "uid": "102",
+      "imgPath": "images/R_7.webp",
+      "text": "Men 925 Sterling Silver Rhodium-plated CZ Studded  Finger Ring",
+      "price": " ₹ 2099"
+    },
+    {
+      "uid": "103",
+      "imgPath": "images/R_8.webp",
+      "text": "Men 925 Sterling Silver Rhodium-plated CZ Studded Finger Ring",
+      "price": " ₹2099 "
+    },
+    {
+      "uid": "104",
+      "imgPath": "images/R_9.jpg",
+      "text": "925 Silver Golden Eternal Bliss Silver Gold Plated Ring",
+      "price": " ₹ 2899"
+    },
+    {
+      "uid": "105",
+      "imgPath": "images/R_10.jpg",
+      "text": "GIVA 925  Adjustable Silver Golden Warrior Prince Ring *",
+      "price": " ₹ 1935"
+    }
+  ]
+}

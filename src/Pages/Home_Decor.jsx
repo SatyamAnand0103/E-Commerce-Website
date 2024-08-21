@@ -1,16 +1,38 @@
-import React from "react";
-import {
-  Home_DecorationDB,
-  ClocksDB,
-  CurtainsDB,
-  WallDecoratorsDB,
-} from "./DB";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
+import { Home_DecorationDB } from "./DB";
 
 const Home_Decor = () => {
   const navigate = useNavigate();
+
+  const [clocks, setClocks] = useState([]);
+  const [curtains, setCurtains] = useState([]);
+  const [wallDecor, setWallDecor] = useState([]);
+
+  useEffect(() => {
+    // Fetch clocks data
+    axios
+      .get("http://localhost:10000/clocks/api")
+      .then((response) => setClocks(response.data.ClocksDB))
+      .catch((error) => console.error("Error fetching clocks data:", error));
+
+    // Fetch curtains data
+    axios
+      .get("http://localhost:11001/curtains/api")
+      .then((response) => setCurtains(response.data.CurtainsDB))
+      .catch((error) => console.error("Error fetching curtains data:", error));
+
+    // Fetch wall decor data
+    axios
+      .get("http://localhost:14000/wallDecor/api")
+      .then((response) => setWallDecor(response.data.WallDecoratorsDB))
+      .catch((error) =>
+        console.error("Error fetching wall decor data:", error)
+      );
+  }, []);
 
   const ScrollBarHome = (args) => {
     if (args === "Clocks") {
@@ -21,97 +43,76 @@ const Home_Decor = () => {
       window.scrollTo(0, 1300);
     }
   };
+
   let items, database;
 
-  //for clocks items and databse
-  let ClocksToShopping = (i) => {
-    // alert(i + "" + "Clocks");
-    if (i >= 0 && i <= 10) {
+  // Navigation handlers
+  const navigateToShopping = (i, type) => {
+    if (type === "Clocks") {
       items = "Clocks";
-      database = ClocksDB;
-    }
-    navigate("/shopping", { state: { i, database, items } });
-  };
-  // for curtains items and database
-  let CurtainsToShopping = (i) => {
-    // alert(i + "" + "Clocks");
-    if (i >= 0 && i <= 10) {
+      database = clocks;
+    } else if (type === "Curtains") {
       items = "Curtains";
-      database = CurtainsDB;
-    }
-    navigate("/shopping", { state: { i, database, items } });
-  };
-  // for wall items ad databse
-  let WallToShopping = (i) => {
-    // alert(i + "" + "Clocks");
-    if (i >= 0 && i <= 10) {
+      database = curtains;
+    } else if (type === "Wall Decor") {
       items = "Wall Decor";
-      database = WallDecoratorsDB;
+      database = wallDecor;
     }
     navigate("/shopping", { state: { i, database, items } });
   };
 
-  const listItems_4 = Home_DecorationDB.map((eachItem) => {
-    return (
-      <>
-        <img src={eachItem.imgPath} className="pictures_Home"></img>
-      </>
-    );
-  });
+  // Static home decoration items
+  const listItems_4 = Home_DecorationDB.map((eachItem, index) => (
+    <img
+      key={index}
+      src={eachItem.imgPath}
+      className="pictures_Home"
+      alt={`Home Decor ${index}`}
+    />
+  ));
 
-  // for clocks
-  const listItemsForClocks = ClocksDB.map((eachItem, index) => {
-    return (
-      <>
-        <div key={index} className="boxKItem">
-          <img
-            src={eachItem.imgPath}
-            className="picturesClocks"
-            onClick={() => ClocksToShopping(index)}
-          ></img>
-          <p className="priceTag">{eachItem.price}</p>
-        </div>
-      </>
-    );
-  });
+  // Dynamic items from APIs
+  const listItemsForClocks = clocks.map((eachItem, index) => (
+    <div key={index} className="boxKItem">
+      <img
+        src={eachItem.imgPath}
+        className="picturesClocks"
+        onClick={() => navigateToShopping(index, "Clocks")}
+        alt={`Clock ${index}`}
+      />
+      <p className="priceTag">{eachItem.price}</p>
+    </div>
+  ));
 
-  //for curtains
-  const listItemsForCurtains = CurtainsDB.map((eachItem,index) => {
-    return (
-      <>
-        <div key={index}>
-          <img
-            src={eachItem.imgPath}
-            className="picturesHome"
-            onClick={() => CurtainsToShopping(index)}
-          ></img>
-          <div className="textForcurtains">
-            <p>{eachItem.text}</p>
-            <p>{eachItem.price}</p>
-          </div>
-        </div>
-      </>
-    );
-  });
+  const listItemsForCurtains = curtains.map((eachItem, index) => (
+    <div key={index}>
+      <img
+        src={eachItem.imgPath}
+        className="picturesHome"
+        onClick={() => navigateToShopping(index, "Curtains")}
+        alt={`Curtain ${index}`}
+      />
+      <div className="textForcurtains">
+        <p>{eachItem.text}</p>
+        <p>{eachItem.price}</p>
+      </div>
+    </div>
+  ));
 
-  // for Wall Decorators
-  const listItemsForWallDecor = WallDecoratorsDB.map((eachItem,index) => {
-    return (
-      <>
-        <div key={index}>
-          <img
-            src={eachItem.imgPath}
-            className="picturesHome"
-            onClick={() => WallToShopping(index)}
-          ></img>
-          <div className="textForcurtains">
-            <p>{eachItem.text}</p>
-            <p>{eachItem.price}</p>
-          </div>
-        </div>
-      </>
-    );
-  });
+  const listItemsForWallDecor = wallDecor.map((eachItem, index) => (
+    <div key={index}>
+      <img
+        src={eachItem.imgPath}
+        className="picturesHome"
+        onClick={() => navigateToShopping(index, "Wall Decor")}
+        alt={`Wall Decor ${index}`}
+      />
+      <div className="textForcurtains">
+        <p>{eachItem.text}</p>
+        <p>{eachItem.price}</p>
+      </div>
+    </div>
+  ));
 
   return (
     <>
@@ -128,21 +129,21 @@ const Home_Decor = () => {
         </h5>
         <div className="imageContain">{listItems_4}</div>
       </div>
+
       <div className="containerComponent">
-        {/* For kurtis */}
         <p className="highterBox"> Clocks </p>
         <div className="containerForHome">{listItemsForClocks}</div>
-        {/* Curtains */}
+
         <p className="highterBox"> Curtains </p>
         <div className="containerForHome">{listItemsForCurtains}</div>
-        {/* Wall Decorations */}
+
         <p className="highterBox"> Wall Decorators </p>
         <div className="containerForHome">{listItemsForWallDecor}</div>
       </div>
 
-      {/* contact details */}
       <Footer />
     </>
   );
 };
+
 export default Home_Decor;

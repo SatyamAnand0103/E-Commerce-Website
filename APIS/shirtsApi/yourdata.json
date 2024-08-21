@@ -1,0 +1,159 @@
+{
+  "shirtsDB": [
+    {
+      "uid": "1",
+      "imgPath": "images/A_1.avif",
+      "price": " ₹ 499",
+      "text": "Men's Womens Lanvin Gallery Short Sleeve T-shirt black",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "2",
+      "imgPath": "images/A_2.avif",
+      "price": " ₹ 699",
+      "text": "Black Embrouidered Silk T-Shirt And Pants Set For Men",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "3",
+
+      "imgPath": "images/A_3.avif",
+      "price": " ₹ 899",
+      "text": "Beige Sun And Shadow Printed Shirt",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "4",
+
+      "imgPath": "images/A_4.avif",
+      "price": " ₹ 799",
+      "text": "Beige Sun And Shadow Printed Shirt",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "5",
+
+      "imgPath": "images/A_5.avif",
+      "price": " ₹ 599",
+      "text": "IZOD Blue Check L/S Button Up Soft-Washed Essentials Shirt",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "6",
+
+      "imgPath": "images/A_6.avif",
+      "price": " ₹ 699",
+      "text": "Charles Tyrwhitt Non-Iron Twill Super Slim Fit Shirt Men's",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "7",
+      "imgPath": "images/A_7.avif",
+      "price": " ₹ 1099",
+      "text": "Men's Womens Lanvin Gallery printing Dept Short Sleeve High Street T-shirt black",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "8",
+
+      "imgPath": "images/A_7.avif",
+      "price": " ₹ 999",
+      "text": "Polo Ralph Lauren Shirt Mens Yarmouth 100% Cotton",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "9",
+
+      "imgPath": "images/A_8.avif",
+      "price": " ₹ 799",
+      "text": "Black Old Mickey Embrouidered Cotton Shirt For Men",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "10",
+
+      "imgPath": "images/A_20.avif",
+      "price": " ₹ 899",
+      "text": "White Evil Eye Embrouidered Cotton Shirt For Men",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "11",
+      "imgPath": "images/A_19.avif",
+      "price": " ₹ 499",
+      "text": "Multicolour Castor Floral Print Cotton Shirt For Men",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "12",
+
+      "imgPath": "images/A_18.avif",
+      "price": " ₹ 999",
+      "text": "Olive Patch Work Olinoir Shirt For Men",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "13",
+
+      "imgPath": "images/A_10.avif",
+      "price": " ₹ 499",
+      "text": "White Cotton Satin Bianco Shirt For Men",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "14",
+
+      "imgPath": "images/A_11.avif",
+      "price": " ₹ 499",
+      "text": "Beige Perimeter Printed T-Shirt",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "15",
+
+      "imgPath": "images/A_12.avif",
+      "price": " ₹ 499",
+      "text": "Black New Mickey Embrouidered Cotton T-Shirt For Men",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "16",
+      "imgPath": "images/A_13.avif",
+      "price": " ₹ 499",
+      "text": "Typographic Print Slim Fit Polo T-Shirt",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "17",
+
+      "imgPath": "images/A_14.avif",
+      "price": " ₹ 499",
+      "text": "Regular Fit Heathered Pattern Polo T-Shirt",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "18",
+      "imgPath": "images/A_155.avif",
+      "price": " ₹ 499",
+      "text": "Men Oversized Crew-Neck Cotton T-Shirt",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+
+    {
+      "uid": "19",
+
+      "imgPath": "images/A_16.avif",
+      "price": " ₹ 499",
+      "text": "Regular Fit Popcorn Textured Crew-Neck T-Shirt",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "20",
+
+      "imgPath": "images/A_17.avif",
+      "price": " ₹ 499",
+      "text": "Men Brand Print Regular Fit Crew-Neck T-Shirt",
+      "stars": "⭐⭐⭐⭐"
+    }
+  ]
+}

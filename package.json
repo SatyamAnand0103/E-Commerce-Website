@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.3",
+    "axios": "^1.7.4",
     "gh-pages": "^6.1.1",
     "json-server": "^1.0.0-beta.1",
     "react": "^18.3.1",
@@ -21,9 +21,17 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start:react": "react-scripts start",
+    "start:clocks": "node ./APIS/clocksApi/index.js",
+    "start:curtains": "node ./APIS/curtainsApi/index.js",
+    "start:jeans": "node ./APIS/jeansApi/app.js",
+    "start:kurtis": "node ./APIS/kurtisApi/index.js",
+    "start:lehengas": "node ./APIS/lehengasApi/index.js",
+    "start:rings": "node ./APIS/ringsApi/index.js",
+    "start:sarees": "node ./APIS/sareesApi/index.js",
+    "start:shirts": "node ./APIS/shirtsApi/index.js",
+    "start:wallDecorators": "node ./APIS/wallDecoratorsApi/index.js",
+    "start:all": "concurrently \"npm run start:clocks\" \"npm run start:curtains\" \"npm run start:jeans\" \"npm run start:kurtis\" \"npm run start:lehengas\" \"npm run start:rings\" \"npm run start:sarees\" \"npm run start:shirts\" \"npm run start:wallDecorators\""
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

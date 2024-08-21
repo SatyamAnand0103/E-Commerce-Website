@@ -1,12 +1,56 @@
-import React from "react";
-import { kurtisDB, lehengasDB, sareesDB, womenDB } from "./DB";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
+import { womenDB } from "./DB";
 
 const Women = () => {
+  const [kurtisData, setKurtisData] = useState([]);
+  const [sareesData, setSareesData] = useState([]);
+  const [lehengasData, setLehengasData] = useState([]);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Fetch Kurtis data
+    axios
+      .get("http://localhost:1000/kurtis/api")
+      .then((response) => {
+        console.log("Kurtis API Full Response:", response.data);
+        if (response.data && Array.isArray(response.data.kurtisDB)) {
+          setKurtisData(response.data.kurtisDB);
+        } else {
+          console.error("Kurtis API did not return an array:", response.data);
+        }
+      })
+      .catch((error) => console.error("Error fetching Kurtis data:", error));
+
+    // Fetch Sarees data
+    axios
+      .get("http://localhost:8000/sarees/api")
+      .then((response) => {
+        console.log("Sarees API Full Response:", response.data);
+        if (response.data && Array.isArray(response.data.sareesDB)) {
+          setSareesData(response.data.sareesDB);
+        } else {
+          console.error("Sarees API did not return an array:", response.data);
+        }
+      })
+      .catch((error) => console.error("Error fetching Sarees data:", error));
+
+    // Fetch Lehengas data
+    axios
+      .get("http://localhost:9000/lehengas/api")
+      .then((response) => {
+        console.log("Lehengas API Full Response:", response.data);
+        if (response.data && Array.isArray(response.data.lehengasDB)) {
+          setLehengasData(response.data.lehengasDB);
+        } else {
+          console.error("Lehengas API did not return an array:", response.data);
+        }
+      })
+      .catch((error) => console.error("Error fetching Lehengas data:", error));
+  }, []);
   const ScrollWomen = (args) => {
     if (args === "Kurtis") {
       document.documentElement.scrollTo(0, 1100);
@@ -17,130 +61,99 @@ const Women = () => {
     }
   };
 
-  let items;
-  let database;
-  let WomensToShopping = (i) => {
-    // alert(i);
-    const clothes = [" Sarees", "Kurtis", "Lehengas"];
+  const WomensToShopping = (i) => {
+    let items;
+    let database;
 
     if (i === 0) {
-      database = sareesDB;
-      items = clothes[0];
-    } else if (i === 1) {
-      items = clothes[1];
-      database = kurtisDB;
-    } else if (i === 2) {
-      items = clothes[2];
-
-      database = lehengasDB;
-    }
-
-    navigate("/shopping", { state: { i, items, database } });
-  };
-  // for kurtis items and database
-  let KurtisToShopping = (i) => {
-    // alert(i + " Kurtis");
-
-    if (i >= 0 && i <= 12) {
-      items = "Kurtis";
-      database = kurtisDB;
-    }
-    navigate("/shopping", { state: { i, items, database } });
-  };
-
-  // for saress items and database
-  let SareesToShopping = (i) => {
-    // alert(i + " Sarees");
-
-    if (i >= 0 && i <= 12) {
+      database = sareesData;
       items = "Sarees";
-      database = sareesDB;
-    }
-    navigate("/shopping", { state: { i, items, database } });
-  };
-  // for lehengas items and database
-  let LehengasToShopping = (i) => {
-    // alert(i + " Lehengas");
-
-    if (i >= 0 && i <= 12) {
+    } else if (i === 1) {
+      database = kurtisData;
+      items = "Kurtis";
+    } else if (i === 2) {
+      database = lehengasData;
       items = "Lehengas";
-      database = lehengasDB;
     }
+
     navigate("/shopping", { state: { i, items, database } });
   };
 
-  const listItems_2 = womenDB.map((eachItem, index) => {
-    return (
-      <>
-        <div key={index} className="boxWItem">
-          <img
-            src={eachItem.imgPath}
-            className="pictures_w"
-            onClick={() => WomensToShopping(index)}
-          ></img>
-          <div className="text">{eachItem.text}</div>
-        </div>
-      </>
-    );
-  });
+  const KurtisToShopping = (i) => {
+    navigate("/shopping", {
+      state: { i, items: "Kurtis", database: kurtisData },
+    });
+  };
 
-  const listItemsKurtis = kurtisDB.map((eachItem, index) => {
-    return (
-      <>
-        <div key={index} className="boxKItem">
-          <img
-            src={eachItem.imgPath}
-            className="pictures_k"
-            onClick={() => KurtisToShopping(index)}
-          />
-          <div className="textOfClothes">
-            <p>{eachItem.text}</p>
-            <p>{eachItem.price}</p>
-          </div>
-        </div>
-      </>
-    );
-  });
+  const SareesToShopping = (i) => {
+    navigate("/shopping", {
+      state: { i, items: "Sarees", database: sareesData },
+    });
+  };
 
-  // for Sarees
+  const LehengasToShopping = (i) => {
+    navigate("/shopping", {
+      state: { i, items: "Lehengas", database: lehengasData },
+    });
+  };
 
-  const listItemsSarees = sareesDB.map((eachItem, index) => {
-    return (
-      <>
-        <div key={index} className="boxKItem">
-          <img
-            src={eachItem.imgPath}
-            className="pictures_k"
-            onClick={() => SareesToShopping(index)}
-          ></img>
-          <div className="textOfClothes">
-            <p>{eachItem.text}</p>
-            <p>{eachItem.price}</p>
-          </div>
-        </div>
-      </>
-    );
-  });
+  const listItems_2 = womenDB.map((eachItem, index) => (
+    <div key={index} className="boxWItem">
+      <img
+        src={eachItem.imgPath}
+        className="pictures_w"
+        onClick={() => WomensToShopping(index)}
+        alt={eachItem.text}
+      />
+      <div className="text">{eachItem.text}</div>
+    </div>
+  ));
 
-  //for Lehengas
+  const listItemsKurtis = kurtisData.map((eachItem, index) => (
+    <div key={index} className="boxKItem">
+      <img
+        src={eachItem.imgPath}
+        className="pictures_k"
+        onClick={() => KurtisToShopping(index)}
+        alt={eachItem.text}
+      />
+      <div className="textOfClothes">
+        <p>{eachItem.text}</p>
+        <p>{eachItem.price}</p>
+      </div>
+    </div>
+  ));
 
-  const listItemsLehengas = lehengasDB.map((eachItem, index) => {
-    return (
-      <>
-        <div key={index} className="boxKItem">
-          <img
-            src={eachItem.imgPath}
-            className="pictures_k"
-            onClick={() => LehengasToShopping(index)}
-          ></img>
-          <span className="textOfClothes">
-            <p>{eachItem.text}</p>
-            <p>{eachItem.price}</p>
-          </span>
-        </div>
-      </>
-    );
-  });
+  const listItemsSarees = sareesData.map((eachItem, index) => (
+    <div key={index} className="boxKItem">
+      <img
+        src={eachItem.imgPath}
+        className="pictures_k"
+        onClick={() => SareesToShopping(index)}
+        alt={eachItem.text}
+      />
+      <div className="textOfClothes">
+        <p>{eachItem.text}</p>
+        <p>{eachItem.price}</p>
+      </div>
+    </div>
+  ));
+
+  const listItemsLehengas = lehengasData.map((eachItem, index) => (
+    <div key={index} className="boxKItem">
+      <img
+        src={eachItem.imgPath}
+        className="pictures_k"
+        onClick={() => LehengasToShopping(index)}
+        alt={eachItem.text}
+      />
+      <span className="textOfClothes">
+        <p>{eachItem.text}</p>
+        <p>{eachItem.price}</p>
+      </span>
+    </div>
+  ));
+
   return (
     <div>
       <Navbar scrollBarForWomenPage={ScrollWomen} />
@@ -148,37 +161,28 @@ const Women = () => {
       <div className="caraouselContainer">
         <div className="carousel animate">
           <div className="carousel-item">
-            <img src={require("../images/W_1.avif")}></img>
+            <img src="/images/W_1.avif" alt="carousel 1" />
           </div>
-
           <div className="carousel-item">
-            <img src={require("../images/W_3.avif")}></img>
+            <img src="/images/W_3.avif" alt="carousel 2" />
           </div>
-
           <div className="carousel-item">
-            <img src={require("../images/W_2.avif")}></img>
+            <img src="/images/W_2.avif" alt="carousel 3" />
           </div>
-
           <div className="carousel-item">
-            <img src={require("../images/W_3.avif")}></img>
+            <img src="/images/W_3.avif" alt="carousel 4" />
           </div>
         </div>
       </div>
 
-      <div className="containerWomen">
-        {listItems_2}
-        {/* <div className="title2"> Earthy Palette For Summer</div> */}
-      </div>
+      <div className="containerWomen">{listItems_2}</div>
 
-      {/* For kurtis */}
       <p className="highterBox"> Designer Kurtis </p>
       <div className="containerKurtis">{listItemsKurtis}</div>
 
-      {/* for sarees */}
       <p className="highterBox"> Designer Sarees </p>
       <div className="containerSarees">{listItemsSarees}</div>
 
-      {/* for lehengas */}
       <p className="highterBox"> Designer Lehengas</p>
       <div className="containerLehengas">{listItemsLehengas}</div>
 
@@ -186,4 +190,5 @@ const Women = () => {
     </div>
   );
 };
+
 export default Women;

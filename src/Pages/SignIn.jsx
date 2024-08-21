@@ -28,10 +28,7 @@ function SignIn() {
             globe
           </p>
           <div className="cart">
-            <img
-              src={require("../images/shoppingCart.jpeg")}
-              alt="Shopping Cart"
-            />
+            <img src={"images/shoppingCart.jpeg"} alt="Shopping Cart" />
           </div>
         </div>
       </div>

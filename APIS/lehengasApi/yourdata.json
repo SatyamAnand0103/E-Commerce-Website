@@ -1,0 +1,76 @@
+{
+  "lehengasDB": [
+    {
+      "uid": 48,
+      "imgPath": "images/L1.webp",
+      "text": "Blue Rajasthan Block Printed Pure Cotton Lehenga",
+      "price": "₹ 1999"
+    },
+    {
+      "uid": 49,
+      "imgPath": "images/L2.jpg",
+      "text": "Green Pure Cotton Rajasthan Screen Printed Lehenga",
+      "price": "₹ 8999"
+    },
+    {
+      "uid": 50,
+      "imgPath": "images/L3.avif",
+      "text": "Pink Brocade Embroidered Bahara Handcrafted Lehenga",
+      "price": "₹ 34999"
+    },
+    {
+      "uid": 51,
+      "imgPath": "images/L4.avif",
+      "text": "Pink Brocade Embroidered Chandini Lehenga",
+      "price": "₹ 22999"
+    },
+    {
+      "uid": 52,
+      "imgPath": "images/L5.jpg",
+      "text": "Orange Rajasthan Block Printed Pure Cotton Lehenga",
+      "price": "₹ 3999"
+    },
+    {
+      "uid": 53,
+      "imgPath": "images/L6.webp",
+      "text": "Red Rajasthan Pure Cotton Printed Sanganeri Lehenga",
+      "price": "₹ 7499"
+    },
+    {
+      "uid": 54,
+      "imgPath": "images/L7.avif",
+      "text": "Lavender Breeze Sharara Lehenga Set",
+      "price": "₹ 25000"
+    },
+    {
+      "uid": 55,
+      "imgPath": "images/L8.avif",
+      "text": "Grey Mirror Embroidered Organza Lehenga Set",
+      "price": "₹ 140000"
+    },
+    {
+      "uid": 56,
+      "imgPath": "images/L9.avif",
+      "text": "Yellow Paisley Print Tiered Lehenga Set",
+      "price": "₹ 48000"
+    },
+    {
+      "uid": 57,
+      "imgPath": "images/L10.avif",
+      "text": "Red Bagh Block Printed Pure Cotton Saree",
+      "price": "₹ 8400"
+    },
+    {
+      "uid": 58,
+      "imgPath": "images/L11.avif",
+      "text": "Yellow Lehenga Set With Sequin Dori Blouse And Mesh Dupatta",
+      "price": "₹ 13300"
+    },
+    {
+      "uid": 59,
+      "imgPath": "images/L12.avif",
+      "text": "Yellow Floral Print Lehenga Set With Blouse And Dupatta",
+      "price": "₹ 7350"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "kurtisDB": [
+    {
+      "uid": "24",
+      "imgPath": "images/K_1.webp",
+      "text": "Sangria Ikat Peplum Belted Short Kurti",
+      "price": " ₹ 960"
+    },
+    {
+      "uid": "26",
+      "imgPath": "images/K_2.webp",
+      "text": "Lime Foil Belted Short Cotton Kurti",
+      "price": " ₹ 1500"
+    },
+    {
+      "uid": "27",
+      "imgPath": "images/K_3.webp",
+      "text": "Grey Mirror Embrouidered Short Kurta",
+      "price": " ₹ 800"
+    },
+    {
+      "uid": "28",
+      "imgPath": "images/K_4.avif",
+      "text": "Pink Foil High Slit Short Cotton Kurta",
+      "price": " ₹ 900"
+    },
+    {
+      "uid": "5",
+      "imgPath": "images/K_5.avif",
+      "text": "Blush Foil V-Neck Cut-Out Short Kurti",
+      "price": " ₹ 900"
+    },
+    {
+      "uid": "29",
+      "imgPath": "images/K_6.avif",
+      "text": "Yellow Embrouidered Yoke A Line Kurta",
+      "price": " ₹ 975"
+    },
+    {
+      "uid": "30",
+      "imgPath": "images/K_7.avif",
+      "text": "Ivory Blue Cotton Printed Maxi Kurta with Patch Pockets",
+      "price": " ₹ 1100"
+    },
+    {
+      "uid": "31",
+      "imgPath": "images/K_8.avif",
+      "text": "Mustard Mughal Foil Lace Hem A-Line Kurta",
+      "price": " ₹ 1475"
+    },
+    {
+      "uid": "32",
+      "imgPath": "images/K_9.avif",
+      "text": "Yellow Foil Print Layered Chanderi Kurta",
+      "price": " ₹ 1400"
+    },
+    {
+      "uid": "33",
+      "imgPath": "images//K_10.avif",
+      "text": "Navy Chikankari Strappy Short Kurti",
+      "price": " ₹ 1050"
+    },
+    {
+      "uid": "34",
+      "imgPath": "images/K_11.avif",
+      "text": "Navy Boota Peplum Belted Short Kurta ",
+      "price": " ₹ 950"
+    },
+    {
+      "uid": "35",
+      "imgPath": "images/K_12.avif",
+      "text": "Navy Chevron Foil Belted Short Kurta",
+      "price": " ₹ 800"
+    }
+  ]
+}

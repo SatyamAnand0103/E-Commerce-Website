@@ -1,0 +1,58 @@
+{
+  "CurtainsDB": [
+    {
+      "uid": 75,
+      "imgPath": "images/CT_1.jpg",
+      "text": "Richmond Cortina Jacquard Shower Curtain with Rings - 180x180cm",
+      "price": " ₹ 499"
+    },
+    {
+      "uid": 76,
+      "imgPath": "images/CT_2.jpg",
+      "text": "Mellow Iguana Floral Print Light Filtering Door Curtain",
+      "price": " ₹ 1599"
+    },
+    {
+      "uid": 77,
+      "imgPath": "images/CT_3.jpg",
+      "text": "Richmond Cortina Printed Shower Curtain with Rings - 180x180cm",
+      "price": " ₹ 499"
+    },
+    {
+      "uid": 78,
+      "imgPath": "images/CT_4.jpg",
+      "text": "Calamus Lattice Velvet Finish Room-Darkening Window Curtain",
+      "price": " ₹ 1399"
+    },
+    {
+      "uid": 79,
+      "imgPath": "images/CT_5.jpg",
+      "text": "Calamus Jacquard Room Darkening Door Curtains",
+      "price": " ₹ 1599"
+    },
+    {
+      "uid": 80,
+      "imgPath": "images/CT_6.jpg",
+      "text": "Corsica Andrea Set of 2 Printed Light Filtering Door Curtains",
+      "price": " ₹ 1199"
+    },
+    {
+      "uid": 81,
+      "imgPath": "images/CT_7.jpg",
+      "text": "Corsica Andrea Set of 2 Printed Light-Filtering Window Curtains",
+      "price": " ₹ 799"
+    },
+    {
+      "uid": 82,
+      "imgPath": "images/CT_8.jpg",
+      "text": "Mellow Printed Room Darkening Door Curtain",
+      "price": " ₹ 1119"
+    },
+    {
+      "uid": 83,
+      "imgPath": "images/CT_9.jpg",
+      "text": "Mellow Elm Floral Print Light Filtering Window Curtain",
+      "price": " ₹ 1299"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "sareesDB": [
+    {
+      "uid": "36",
+      "imgPath": "images/S_1.webp",
+      "text": "Dark Pink Bengal Pure Cotton Mulmul Block Printed Saree",
+      "price": " ₹ 1999"
+    },
+    {
+      "uid": "37",
+      "imgPath": "images/S_2.webp",
+      "text": "Red Bagh Block Printed Pure Cotton Saree",
+      "price": " ₹ 2599"
+    },
+    {
+      "uid": "38",
+      "imgPath": "images/S_3.webp",
+      "text": "Off White Maharashtra Printed Khadi Cotton Saree",
+      "price": " ₹6999"
+    },
+    {
+      "uid": "39",
+      "imgPath": "images/S_4.jpg",
+      "text": "Grey Screen Printed Pure Silk Cotton Saree",
+      "price": " ₹ 3999"
+    },
+    {
+      "uid": "40",
+      "imgPath": "images/S_5.jpg",
+      "text": "Pink Bengal Pure Cotton Jamdani Saree",
+      "price": " ₹ 3499"
+    },
+    {
+      "uid": "41",
+      "imgPath": "images/S_6.jpg",
+      "text": "Light Pink Rajasthani Cotton Printed Sanganeri Saree",
+      "price": " ₹ 1999"
+    },
+    {
+      "uid": "42",
+      "imgPath": "images/S_7.jpg",
+      "text": "Off White Bagh Block Printed Pure Cotton Saree",
+      "price": " ₹ 2599"
+    },
+    {
+      "uid": "43",
+      "imgPath": "images/S_8.jpg",
+      "text": "Light Green Bagh Block Printed Pure Cotton Saree",
+      "price": " ₹ 2599"
+    },
+    {
+      "uid": "44",
+      "imgPath": "images/S_9.jpg",
+      "text": "Light Blue Ujjain Pure Cotton Batik Saree",
+      "price": " ₹ 1299"
+    },
+    {
+      "uid": "45",
+      "imgPath": "images//S_10.webp",
+      "text": "Red Bagh Block Printed Pure Cotton Saree",
+      "price": " ₹ 1050"
+    },
+    {
+      "uid": "46",
+      "imgPath": "images/S_11.jpg",
+      "text": "Red Bagh Block Printed Pure Cotton Saree ",
+      "price": " ₹ 2599"
+    },
+    {
+      "uid": "47",
+      "imgPath": "images/S_12.webp",
+      "text": "Light Orange Ujjain Pure Cotton Batik Saree",
+      "price": " ₹ 1299"
+    }
+  ]
+}

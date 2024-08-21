@@ -1,0 +1,40 @@
+{
+  "WallDecoratorsDB": [
+    {
+      "uid": 84,
+      "imgPath": "images/WD_1.jpg",
+      "text": "Helios Medley Wall Shelf - Brown",
+      "price": "₹ 899"
+    },
+    {
+      "uid": 85,
+      "imgPath": "images/WD_2.jpg",
+      "text": "Helios Ruby Wall Shelf - Brown",
+      "price": "₹ 699"
+    },
+    {
+      "uid": 86,
+      "imgPath": "images/WD_3.jpg",
+      "text": "Home Centre Helios Lucia Key Shelf - Brown",
+      "price": "₹ 599"
+    },
+    {
+      "uid": 87,
+      "imgPath": "images/WD_4.jpg",
+      "text": "Juliet Soluid Wood 5-Tier Planter - Brown",
+      "price": "₹ 12999"
+    },
+    {
+      "uid": 88,
+      "imgPath": "images/WD_5.jpg",
+      "text": "Hydra Metal Wall Shelf - Gold",
+      "price": "₹ 1199"
+    },
+    {
+      "uid": 89,
+      "imgPath": "images/WD_6.jpg",
+      "text": "Helios Twist 3-Tier Wall Shelf - Brown",
+      "price": "₹ 1599"
+    }
+  ]
+}

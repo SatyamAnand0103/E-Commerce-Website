@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="ToTop" ref={refElement} onClick={arrowScroll}>
-          <img src={require("../images/Arrow.png")} id="arrow"></img>
+          <img src={"/images/Arrow.png"} id="arrow"></img>
         </div>
       </div>
     </>

@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useRef } from "react";
 
 const Shopping = () => {
   const [basketVisible, setBasketVisible] = useState("none");
+  const [basketItems, setBasketItems] = useState([]);
   const [formData, setFormData] = useState({
     email: "",
     firstName: "",
@@ -21,6 +19,16 @@ const Shopping = () => {
     paymentMethod: "",
   });
 
+  const refBasket = useRef();
+  const refPay = useRef();
+  const location = useLocation();
+  const { i, items, database } = location.state || {};
+
+  useEffect(() => {
+    const savedItems = JSON.parse(localStorage.getItem("basketItems")) || [];
+    setBasketItems(savedItems);
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -34,19 +42,8 @@ const Shopping = () => {
     console.log("Form Data Submitted: ", formData);
     alert("Form Submitted Successfully!");
   };
-  const refBasket = { useRef };
-  const refPay = { useRef };
-  const location = useLocation();
-  // const [createDiv, setCreateDiv] = useState(false);
-  const { i, items, database } = location.state || {};
-  // const [outfit, SetOutfit] = useState(null);
 
-  // SetOutfit("Shirt");
-  let displayPaymentPage = () => {
-    // alert("its working");
-
-    // document.documentElement.scrollTo(0, 600);
-
+  const displayPaymentPage = () => {
     console.log("its working !");
     refPay.current.style.border = "2px solid";
     refPay.current.style.height = "36em";
@@ -56,32 +53,39 @@ const Shopping = () => {
     refPay.current.style.marginTop = "-2em";
   };
 
-  let AddToBasket = (i) => {
+  const AddToBasket = (i) => {
+    const selectedItem = database[i];
+    const updatedBasket = [...basketItems, selectedItem];
+    setBasketItems(updatedBasket);
+    localStorage.setItem("basketItems", JSON.stringify(updatedBasket));
     setBasketVisible("block");
-    alert("Index is " + i);
-    // refBasket.current.style.display = "block";
-    refBasket.current.style.trasnition = "0.5s";
-
-
   };
 
-  let CloseTheBasket = () => {
-    setBasketVisible("none");
+  const removeItemFromBasket = (index) => {
+    const updatedBasket = basketItems.filter(
+      (_, itemIndex) => itemIndex !== index
+    );
+    setBasketItems(updatedBasket);
+    localStorage.setItem("basketItems", JSON.stringify(updatedBasket));
+  };
 
-    // refBasket.current.style.display = "none";
+  const saveBasket = () => {
+    localStorage.setItem("basketItems", JSON.stringify(basketItems));
+    alert("Basket saved!");
+  };
+
+  const CloseTheBasket = () => {
+    setBasketVisible("none");
   };
 
   const MyDiv = {
-    // border: "2px solid black",
-    position: " relative",
+    position: "relative",
     height: "18em",
     width: "18em",
     top: "12em",
     margin: "auto",
     left: "-10em",
   };
-
-  // ------------------------------------------------
 
   return (
     <>
@@ -95,14 +99,10 @@ const Shopping = () => {
           padding: "0",
         }}
       >
-        {/* {i && ( */}
         <div style={MyDiv}>
-          <img src={database[i].imgPath} id="MyDiv" />
-
-          {/* {i} */}
+          <img src={database[i].imgPath} id="MyDiv" alt="Product" />
           <h2 id="typeOfClothe"> {items}</h2>
         </div>
-        <div id="myresult" class="img-zoom-result"></div>
 
         <p className="dbText"> {database[i].text}</p>
         <p className="dbPrice">{database[i].price}</p>
@@ -118,8 +118,7 @@ const Shopping = () => {
             placeholder="1"
           />
         </p>
-        <label for="Size" className="Size">
-          {" "}
+        <label htmlFor="Size" className="Size">
           Choose Size :
         </label>
         <select name="Size" id="Size">
@@ -132,13 +131,9 @@ const Shopping = () => {
           <button onClick={() => AddToBasket(i)}>Add To Basket</button>
           <button onClick={displayPaymentPage}>Buy Now</button>
         </div>
-        {/* creating payment page  */}
 
         <div className="Payment" ref={refPay}>
-          {/* form data */}
-          {/* --------------------------------------------------
-          
-          */}
+          {/* Form for payment */}
           <div
             style={{
               padding: "20px",
@@ -429,15 +424,11 @@ const Shopping = () => {
         </div>
         <div
           className="basket"
-          style={{
-            display: basketVisible,
-            // display: "none",
-          }}
+          style={{ display: basketVisible }}
           ref={refBasket}
         >
-          {" "}
           <img
-            src={require("../images/close.png")}
+            src={"images/close.png"}
             onClick={CloseTheBasket}
             style={{
               height: "30px",
@@ -446,17 +437,50 @@ const Shopping = () => {
               right: "1px",
               margin: "17px",
             }}
+            alt="Close"
           />
-          <div >
-            {" "}
-            <img
-              src={database[i].imgPath}
-              style={{
-                border: "2px solid black",
-                height: "40px",
-                width: "60px",
-              }}
-            />
+          <div>
+            {basketItems.map((item, index) => (
+              <div key={index} style={{ margin: "20px", display: "flex" }}>
+                <img
+                  src={item.imgPath}
+                  style={{ height: "8em", marginRight: "20px" }}
+                  alt="Product"
+                />
+                <div style={{ position: "relative", top: "-10px" }}>
+                  <p>{item.text}</p>
+                  <p>{item.price}</p>
+                  <p>{item.stars}</p>
+                  <button
+                    onClick={() => removeItemFromBasket(index)}
+                    style={{
+                      backgroundColor: "red",
+                      color: "white",
+                      padding: "5px 10px",
+                      border: "none",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      marginRight: "10px",
+                    }}
+                  >
+                    Delete
+                  </button>
+                  <button
+                    onClick={saveBasket}
+                    style={{
+                      backgroundColor: "green",
+                      color: "white",
+                      padding: "5px 10px",
+                      border: "none",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

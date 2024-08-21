@@ -1,0 +1,54 @@
+{
+  "ClocksDB": [
+    {
+      "uid": "65",
+      "imgPath": "images/C_1.jpg",
+      "price": " ₹ 1149"
+    },
+    {
+      "uid": "66",
+      "imgPath": "images/C_2.jpg",
+      "price": " ₹ 2990"
+    },
+    {
+      "uid": "67",
+      "imgPath": "images/C_3.jpg",
+      "price": " ₹ 1599"
+    },
+    {
+      "uid": "68",
+      "imgPath": "images/C_4.jpg",
+      "price": " ₹ 999"
+    },
+    {
+      "uid": "69",
+      "imgPath": "images/C_5.jpg",
+      "price": " ₹ 899"
+    },
+    {
+      "uid": "70",
+      "imgPath": "images/C_6.webp",
+      "price": " ₹ 1099"
+    },
+    {
+      "uid": "71",
+      "imgPath": "images/C_7.webp",
+      "price": " ₹ 2499"
+    },
+    {
+      "uid": "72",
+      "imgPath": "images/C_8.webp",
+      "price": " ₹ 1599"
+    },
+    {
+      "uid": "73",
+      "imgPath": "images/C_9.webp",
+      "price": " ₹ 1099"
+    },
+    {
+      "uid": "74",
+      "imgPath": "images/C_10.webp",
+      "price": " ₹ 899"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "jeansDB": [
+    {
+      "uid": "1",
+      "imgPath": "images/J_1.avif",
+      "price": " ₹ 499",
+      "text": "Men's Womens Lanvin Gallery printing Dept High Street Jeans black",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "2",
+      "imgPath": "images/J_2.avif",
+      "price": " ₹ 699",
+      "text": "Lauren Men Custom Slim Fit Jeans Crewneck Pima Cotton Free Shipping",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "3",
+      "imgPath": "images/J_3.avif",
+      "price": " ₹ 899",
+      "text": "Polo Ralph  Men's Classic-Fit Mesh Polo Jeans All Size",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "4",
+      "imgPath": "images/J_4.webp",
+      "price": " ₹ 799",
+      "text": "Calvin Klein Blue 16 Slim Fit Men Dress Lower Non-iron A12",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "5",
+      "imgPath": "images/J_5.avif",
+      "price": " ₹ 599",
+      "text": "IZOD Blue Check L/S Button Up Soft-Washed Essentials Jeans Size X-Large",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "6",
+      "imgPath": "images/J_6.avif",
+      "price": " ₹ 699",
+      "text": "Charles Tyrwhitt Non-Iron Twill Super Slim Fit Jeans Men's",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "7",
+      "imgPath": "images/J_7.webp",
+      "price": " ₹ 1099",
+      "text": "Men's Womens Lanvin Gallery printing Dept Short Sleeve High Street T-shirt black",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "8",
+      "imgPath": "images/J_8.avif",
+      "price": " ₹ 999",
+      "text": "Polo Ralph Lauren Jeans Mens 16/34 Yarmouth Blue Striped Button Down 100% Cotton",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "9",
+
+      "imgPath": "images/J_9.avif",
+      "price": " ₹ 799",
+      "text": "Brooks Brothers Dress Jeans Mens Large Slim Fit Non-Iron Embrouidered Logo Oxford",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "10",
+
+      "imgPath": "images/J_10.avif",
+      "price": " ₹ 899",
+      "text": "Men's Womens Lanvin Gallery printing Dept High Street Jeans black",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "11",
+
+      "imgPath": "images/J_11.avif",
+      "price": " ₹ 499",
+      "text": "Brooks Brothers Dress Jeans Mens Large Slim Fit Non-Iron Embrouidered Logo Oxford",
+
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "12",
+
+      "imgPath": "images/J_12.avif",
+      "price": " ₹ 999",
+      "text": "IZOD Blue Check L/S Button Up Soft-Washed Essentials Jeans Size X-Large",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "13",
+
+      "imgPath": "images/J_13.webp",
+      "price": " ₹ 499",
+      "text": "Brooks Brothers Dress Jeans Mens Large Slim Fit Non-Iron Embrouidered Logo Oxford",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "14",
+
+      "imgPath": "images/J_14.avif",
+      "price": " ₹ 499",
+      "text": "IZOD Blue Check L/S Button Up Soft-Washed Essentials Jeans Size X-Large",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "15",
+
+      "imgPath": "images/J_15.avif",
+      "price": " ₹ 499",
+      "text": "Brooks Brothers Dress Jeans Mens Large Slim Fit Non-Iron Embrouidered Logo Oxford",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "16",
+
+      "imgPath": "images/J_16.avif",
+      "price": " ₹ 499",
+      "text": "Polo Ralph Lauren JeansBlue Striped Button Down 100% Cotton",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "17",
+
+      "imgPath": "images/J_17.avif",
+      "price": " ₹ 499",
+      "text": "Men's Womens Lanvin Gallery printing Dept Short Sleeve High Street T-shirt black",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "uid": "18",
+
+      "imgPath": "images/J_18.avif",
+      "price": " ₹ 499",
+      "text": "Polo Ralph Lauren Jeans Mens 16/34 Yarmouth Blue Striped Button Down 100% Cotton",
+      "stars": "⭐⭐⭐⭐⭐"
+    },
+
+    {
+      "uid": "19",
+
+      "imgPath": "images/J_19.avif",
+      "price": " ₹ 499",
+      "text": "Men's Womens Lanvin Gallery printing Dept Jeans black",
+      "stars": "⭐⭐⭐⭐"
+    },
+    {
+      "uid": "20",
+
+      "imgPath": "images/J_20.avif",
+      "price": " ₹ 499",
+      "text": "Polo Ralph Lauren Jeans Mens Yarmouth Blue Striped Button Down 100% Cotton",
+      "stars": "⭐⭐⭐⭐"
+    }
+  ]
+}
