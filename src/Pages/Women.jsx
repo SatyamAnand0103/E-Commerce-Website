@@ -12,6 +12,10 @@ const Women = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "Womens";
+  }, []);
+
+  useEffect(() => {
     // Fetch Kurtis data
     axios
       .get("http://localhost:1000/kurtis/api")

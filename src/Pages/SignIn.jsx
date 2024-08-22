@@ -1,11 +1,15 @@
 import React from "react";
-import { useRef, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 
 function SignIn() {
   const [currentText, SetCurrentText] = useState("Create Your Account");
   const refEmail = { useRef };
   const refSignUp = { useRef };
   const refSignIn = useRef();
+
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
 
   let LoginButton = () => {
     SetCurrentText("Login Your Account");

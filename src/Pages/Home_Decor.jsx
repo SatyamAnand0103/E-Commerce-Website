@@ -11,6 +11,9 @@ const Home_Decor = () => {
   const [clocks, setClocks] = useState([]);
   const [curtains, setCurtains] = useState([]);
   const [wallDecor, setWallDecor] = useState([]);
+  useEffect(() => {
+    document.title = "Home Decorator";
+  }, []);
 
   useEffect(() => {
     // Fetch clocks data

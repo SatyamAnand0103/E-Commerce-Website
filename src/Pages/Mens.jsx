@@ -12,6 +12,10 @@ const Mens = () => {
   const navigate = useNavigate();
   const el = useRef(null);
 
+  useEffect(() => {
+    document.title = "Mens";
+  }, []);
+
   // Fetch data from both APIs
   useEffect(() => {
     const shirtsURL = "http://localhost:5000/shirt/api";
@@ -65,7 +69,7 @@ const Mens = () => {
         typed.destroy();
       };
     }
-  }, []);
+  });
 
   if (!shirtsData || !jeansData) return <div>Loading...</div>; // Loading state until both datasets are fetched
 
@@ -89,23 +93,17 @@ const Mens = () => {
     <div>
       <Navbar changeDress={changeDressDB} />
 
-      <div className="mens">
-        <div className="bgBox">
-          <div className="animie">
-            <h1 id="typing-container">
-              <span ref={el}></span>
-            </h1>
+      <div className="bgBox">
+        <div className="animie">
+          <h1 id="typing-container">
+            <span ref={el}></span>
+          </h1>
 
-            <h5 className="details">
-              Discover new and stylish summer collection, it will make your
-              shopping perfect.
-            </h5>
-            <img
-              src={"images/shopping.png"}
-              className="fadeImg"
-              alt="Shopping"
-            />
-          </div>
+          <h5 className="details">
+            Discover new and stylish summer collection, it will make your
+            shopping perfect.
+          </h5>
+          <img src={"images/shopping.png"} className="fadeImg" alt="Shopping" />
         </div>
       </div>
 

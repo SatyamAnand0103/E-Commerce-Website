@@ -25,6 +25,10 @@ const Shopping = () => {
   const { i, items, database } = location.state || {};
 
   useEffect(() => {
+    document.title = "Shopping  ";
+  }, []);
+
+  useEffect(() => {
     const savedItems = JSON.parse(localStorage.getItem("basketItems")) || [];
     setBasketItems(savedItems);
   }, []);
@@ -43,13 +47,20 @@ const Shopping = () => {
     alert("Form Submitted Successfully!");
   };
 
+  const CloseThePayment = () => {
+    refPay.current.style.display = "none";
+  };
+
   const displayPaymentPage = () => {
     console.log("its working !");
-    refPay.current.style.border = "2px solid";
+    refPay.current.style.display = "block";
+
+    refPay.current.style.borderTop = "6px solid white";
     refPay.current.style.height = "36em";
     refPay.current.style.width = "84em";
     refPay.current.style.transition = "1s";
-    refPay.current.style.backgroundColor = "white";
+    refPay.current.style.background =
+      "linear-gradient(to right, #87CEFA, #B0E0E6)";
     refPay.current.style.marginTop = "-2em";
   };
 
@@ -94,7 +105,7 @@ const Shopping = () => {
         style={{
           background: "linear-gradient(to right, #ffcccb, white)",
           height: "45.8em",
-          border: "2px solid black",
+          // border: "2px solid black",
           margin: "0",
           padding: "0",
         }}
@@ -133,6 +144,18 @@ const Shopping = () => {
         </div>
 
         <div className="Payment" ref={refPay}>
+          <img
+            src={"images/close.png"}
+            onClick={CloseThePayment}
+            style={{
+              height: "30px",
+              width: "30px",
+              position: "absolute",
+              right: "1px",
+              margin: "17px",
+            }}
+            alt="Close"
+          />
           {/* Form for payment */}
           <div
             style={{

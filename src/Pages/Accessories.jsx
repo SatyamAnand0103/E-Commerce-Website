@@ -10,6 +10,10 @@ const Accessories = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "Accessories";
+  }, []);
+
+  useEffect(() => {
     // Fetch data from the API when the component mounts
     axios
       .get("http://localhost:13000/rings/api")

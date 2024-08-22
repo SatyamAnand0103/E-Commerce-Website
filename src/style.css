@@ -4,31 +4,14 @@ body {
   height: 46em;
   /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
   /* background: linear-gradient(135deg, #87ceeb 0%, #c49fd2 100%); */
-  /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
-  /* background: linear-gradient(to right, #f6d365, #fda085); */
-  /* background: linear-gradient(135deg, #bb8fce, #9b6bcd); */
-
-  /* background-attachment: fixed; */
-  /* background-position: center; */
-  /* background-color: white; */
-  /* opacity: 0.2; */
   background-repeat: no-repeat;
   font-family: Arial, sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
-.mens {
-  /* border: 5px solid blue; */
-  /* background-image: url("./images/wall.avif"); */
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-size: cover;
-}
 
 .bgBox {
-  /* border: 2px solid red; */
   height: 46em;
 }
 
@@ -288,7 +271,6 @@ li:hover {
   display: flex;
   width: 85%;
   height: 53px;
-  /* background: linear-gradient(to right, #bb8fce, #9b6bcd); */
   background: linear-gradient(to right, #a18cd1, #fbc2eb);
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0 4px 6px rgba(218, 80, 80, 0.1);
@@ -343,7 +325,6 @@ input#women:checked ~ .women {
 
 /* Container for the boxes */
 .containerMens {
-  /* border: 4px solid black; */
   padding-top: 50px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -409,7 +390,6 @@ input#women:checked ~ .women {
 }
 
 #marqueeBox {
-  /* border: 2px solid black; */
   width: 88em;
   margin: auto;
   margin-top: 66px;
@@ -423,7 +403,6 @@ input#women:checked ~ .women {
   border-radius: 15px;
 }
 .contents {
-  /* border: 2px solid black; */
   height: 32px;
   padding: 5px 0px 0px 30px;
   margin-left: 73px;
@@ -437,7 +416,6 @@ input#women:checked ~ .women {
   transition: 1s;
 }
 .containerWomen {
-  /* border: 4px solid black; */
   margin-top: 165px;
   display: flex;
 }
@@ -506,7 +484,6 @@ input#women:checked ~ .women {
 }
 
 .tooltiptext {
-  /* border: 2px solid grey; */
   width: 12em;
   margin: auto;
   position: absolute;
@@ -545,7 +522,6 @@ input#women:checked ~ .women {
 }
 
 .caraouselContainer {
-  /* border: 2px solid black; */
   height: 35em;
   width: 90%;
   margin: auto;
@@ -561,23 +537,8 @@ input#women:checked ~ .women {
   margin: auto;
   margin-top: 40px;
 }
-/* .text_w {
-  border: 2px solid black;
-  height: 100px;
-  position: relative;
-  top: -103px;
-  box-sizing: border-box;
-  padding: 20px;
-  z-index: 1;
-  text-align: center;
-  color: white;
-  font-weight: 700;
-  font-size: 22px;
-  text-transform: uppercase;
-} */
 
 .containerKurtis {
-  /* border: 2px solid blue; */
   height: 25em;
   margin: 2px 14px 0px 14px;
   display: flex;
@@ -587,8 +548,6 @@ input#women:checked ~ .women {
 }
 
 .containerSarees {
-  /* border: 2px solid blue; */
-  height: 25em;
   margin: 2px 14px 0px 14px;
   display: flex;
   width: 88%;
@@ -596,7 +555,6 @@ input#women:checked ~ .women {
   overflow: scroll;
 }
 .containerLehengas {
-  /* border: 2px solid blue;  */
   height: 25em;
   margin: 2px 14px 0px 14px;
   display: flex;
@@ -605,7 +563,6 @@ input#women:checked ~ .women {
   overflow: scroll;
 }
 .boxKItem {
-  /* border: 2px solid green; */
   display: block;
   margin: auto;
   text-align: center;
@@ -619,7 +576,6 @@ input#women:checked ~ .women {
 }
 
 .textOfClothes {
-  /* border: 2px solid black; */
   height: 40px;
   position: relative;
   box-sizing: border-box;
@@ -643,7 +599,6 @@ input#women:checked ~ .women {
 }
 
 .highterBox {
-  /* border: 2px solid black; */
   box-sizing: border-box;
   text-align: center;
   font-size: 27px;
@@ -653,18 +608,15 @@ input#women:checked ~ .women {
   color: #000;
 }
 .contact {
-  /* border: 2px solid cornflowerblue; */
   margin-top: 12px;
   margin: 22px 40px 45px;
   background: #fffbed;
 }
 .contact p {
   border-top: 2px solid black;
-  /* margin-left: 50px; */
   padding: 12px;
   font-size: 14px;
   font-weight: 700;
-  /* width: 53em; */
   text-align: center;
 }
 .contact h5 {
@@ -676,7 +628,6 @@ input#women:checked ~ .women {
   margin: auto;
 }
 .contactDetails {
-  /* border: 2px solid black; */
   display: flex;
   margin-top: 43px;
 }
@@ -710,7 +661,7 @@ h3 {
 }
 
 .homeContainer {
-  background-image: url("../public/images/bg.jpeg");
+  background-image: url("../public/images/home.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -733,7 +684,6 @@ h3 {
 }
 
 .containerForHome {
-  /* border: 2px solid blue; */
   height: 26em;
   margin: 2px 14px 0px 14px;
   display: flex;
@@ -742,7 +692,6 @@ h3 {
   margin: auto;
 }
 .priceTag {
-  /* border: 2px solid black; */
   height: 24px;
   padding-top: 8px;
   font-weight: 700;
@@ -759,7 +708,6 @@ h3 {
 }
 
 .picturesClocks {
-  /* width: 223px; */
   height: 16em;
   border-radius: 10px;
 }
@@ -768,11 +716,9 @@ h3 {
   animation-iteration-count: infinite;
 }
 .textForcurtains {
-  /* border: 2px soli d black; */
   font-size: 13px;
   text-align: center;
   font-weight: 700;
-  /* height: 47px; */
   width: 23em;
   margin: auto;
   margin-top: -14px;
@@ -781,12 +727,12 @@ h3 {
 
 .leftBox {
   margin-top: -1px;
-  /* border: 2px solid white; */
   height: 46em;
   position: absolute;
   width: 25em;
-  background-color: #000;
-  opacity: 0.7;
+  /* background-color: #000; */
+  background-color: white;
+  opacity: 0.2;
 }
 .containerComponent {
   margin-top: 100px;
@@ -827,9 +773,7 @@ h3 {
 }
 
 /* Accessories */
-
 .accessContainer {
-  /* background-image: url("./images/bg.jpeg"); */
   background-image: url("../public/images/ring.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -850,7 +794,6 @@ h3 {
 }
 
 .pictures_access {
-  /* width: 20em; */
   height: 18em;
   margin: 6px;
 }
@@ -898,7 +841,6 @@ h3 {
 
 .picturesRings {
   width: 223px;
-  /* height: 18em; */
   border-radius: 10px;
 }
 
@@ -909,13 +851,11 @@ h3 {
 
 .leftBoxAccess {
   margin-top: -1px;
-  /* border-right: 2px solid black; */
   height: 46em;
   position: absolute;
   width: 25em;
   background-color: #fff;
   opacity: 0.7;
-  /* right: -2px; */
 }
 .containerComponent {
   margin-top: 100px;
@@ -938,7 +878,6 @@ h3 {
 }
 .text_Rings {
   font-weight: 700;
-  /* border: 2px solid black; */
   font-size: 12px;
 }
 .accessContainer h5 {
@@ -950,16 +889,19 @@ h3 {
   width: 26em;
 }
 .containerRings {
-  /* border: 2px solid blue; */
   height: 22em;
   margin: 2px 14px 0px 14px;
   display: flex;
   overflow: scroll;
-  background: linear-gradient(to right, pink, lightpink);
+  /* background: linear-gradient(to right, pink, lightpink); */
+  background: linear-gradient(
+    to right,
+    #f9f9f9,
+    #e0e0e0
+  ); /* Light gradient from very light grey to slightly darker grey */
 }
 
 .ToTop {
-  /* border: 1px solid black; */
   position: fixed;
   right: 30px;
   bottom: 1em;
@@ -977,6 +919,7 @@ h3 {
   transition: 1s;
 }
 /* Login page CSS */
+
 .App {
   display: flex;
   height: 100vh;
@@ -1107,7 +1050,6 @@ input:focus {
   border: 5px solid #d2b48c;
 }
 .dbText {
-  /* border: 2px solid black; */
   height: 49px;
   width: 317px;
   position: relative;
@@ -1117,7 +1059,6 @@ input:focus {
   font-weight: 700;
 }
 .dbPrice {
-  /* border: 2px solid black; */
   height: 22px;
   width: 58px;
   position: relative;
@@ -1126,7 +1067,6 @@ input:focus {
   font-weight: 700;
 }
 .dbStars {
-  /* border: 2px solid black; */
   height: 22px;
   width: 100px;
   position: relative;
@@ -1134,7 +1074,6 @@ input:focus {
   top: -143px;
 }
 .NumbrerOfItems {
-  /* border: 2px solid black; */
   height: 22px;
   width: 192px;
   position: relative;
@@ -1154,7 +1093,6 @@ input:focus {
   top: -144px;
 }
 .buttons {
-  /* border: 2px solid black; */
   height: 109px;
   width: 17em;
   position: relative;
@@ -1186,7 +1124,6 @@ input:focus {
   color: white;
   border: none;
   border-radius: 50%;
-  /* padding: 15px; */
   font-size: 20px;
   cursor: pointer;
   height: 42px;
@@ -1252,7 +1189,6 @@ input:focus {
   top: 20%;
   overflow: scroll;
 }
-
 .basket {
   border: 2px solid black;
   height: 35em;
