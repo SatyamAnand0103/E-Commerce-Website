@@ -13,7 +13,7 @@ const Mens = () => {
   const el = useRef(null);
 
   useEffect(() => {
-    document.title = "Mens";
+    document.title = "  ETHNICS | Mens";
   }, []);
 
   // Fetch data from both APIs

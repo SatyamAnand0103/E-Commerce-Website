@@ -8,7 +8,7 @@ function SignIn() {
   const refSignIn = useRef();
 
   useEffect(() => {
-    document.title = "Login";
+    document.title = " ETHNICS | Login";
   }, []);
 
   let LoginButton = () => {

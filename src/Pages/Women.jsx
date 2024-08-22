@@ -12,7 +12,7 @@ const Women = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Womens";
+    document.title = " ETHNICS | Womens";
   }, []);
 
   useEffect(() => {

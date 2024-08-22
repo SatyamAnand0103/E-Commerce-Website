@@ -10,7 +10,7 @@ const Accessories = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Accessories";
+    document.title = "ETHNICS | Accessories";
   }, []);
 
   useEffect(() => {

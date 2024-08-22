@@ -12,7 +12,7 @@ const Home_Decor = () => {
   const [curtains, setCurtains] = useState([]);
   const [wallDecor, setWallDecor] = useState([]);
   useEffect(() => {
-    document.title = "Home Decorator";
+    document.title = " ETHNICS | Home Decorator";
   }, []);
 
   useEffect(() => {

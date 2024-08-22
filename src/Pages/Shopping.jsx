@@ -25,7 +25,7 @@ const Shopping = () => {
   const { i, items, database } = location.state || {};
 
   useEffect(() => {
-    document.title = "Shopping  ";
+    document.title = " ETHNICS | Shopping  ";
   }, []);
 
   useEffect(() => {
